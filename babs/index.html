@@ -2,21 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>uous private</title>
 <style>
-  body, html {
+  html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
+    background-color: #000; /* fallback background */
   }
-  iframe {
-    border: none;
+
+  /* Responsive iframe wrapper */
+  .iframe-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Optional: hide iframe scrollbars on mobile */
+  iframe::-webkit-scrollbar {
+    display: none;
   }
 </style>
 </head>
 <body>
-  <iframe src="https://classicvinyl.github.io/audio-player/"></iframe>
+  <div class="iframe-wrapper">
+    <iframe src="https://classicvinyl.github.io/audio-player/babs/index.html" allowfullscreen></iframe>
+  </div>
 </body>
 </html>
